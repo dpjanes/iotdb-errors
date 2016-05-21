@@ -6,7 +6,6 @@
 #   2016-05-21
 #
 
-exit 0
 PACKAGE=iotdb-errors
 DIST_ROOT=/var/tmp/.dist.$$
 
@@ -35,6 +34,7 @@ echo "=================="
         README.md LICENSE \
         package.json \
         index.js \
+        errors.js \
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1
