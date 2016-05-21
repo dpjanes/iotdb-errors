@@ -116,7 +116,7 @@ util.inherits(NotImplemented, Error);
 function NeverImplemented(message) {
     Error.call(this);
     this.message = message || "never will be implemented";
-    this.code = 501;    
+    this.code = 501;
 }
 
 util.inherits(NeverImplemented, Error);

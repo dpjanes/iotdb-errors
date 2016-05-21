@@ -2,7 +2,7 @@
 IOTDB Module that defines all sorts of useful Error exceptions, 
 with HTTP status codes built in.
 
-<img src="https://raw.githubusercontent.com/dpjanes/iotdb-iotdb/master/docs/HomeStar.png" align="right" />
+<img src="https://raw.githubusercontent.com/dpjanes/iotdb-homestar/master/docs/HomeStar.png" align="right" />
 
 # Installation
 
