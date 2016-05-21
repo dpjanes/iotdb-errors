@@ -3,9 +3,6 @@
     "bugs": {
         "url": "https://github.com/dpjanes/iotdb-errors/issues"
     }, 
-    "dependencies": {
-        "iotdb": ">=0.14.0"
-    }, 
     "description": "IOTDB Module", 
     "devDependencies": {
         "grunt": "~1.0.1", 
