@@ -26,6 +26,7 @@
         "url": "https://github.com/dpjanes/iotdb-errors"
     }, 
     "scripts": {
+        "cover": "istanbul cover _mocha", 
         "test": "grunt"
     }, 
     "version": "3.0.0"
