@@ -100,7 +100,7 @@ function ServiceNotAvailable(message) {
 util.inherits(ServiceNotAvailable, Error);
 
 /**
- *  e.g. expecting a thing and got a recipe
+ *  Not implemented
  */
 function NotImplemented(message) {
     Error.call(this);
@@ -109,6 +109,17 @@ function NotImplemented(message) {
 }
 
 util.inherits(NotImplemented, Error);
+
+/**
+ *  Not implemented
+ */
+function ShouldBeImplementedInSubclass(message) {
+    Error.call(this);
+    this.message = message || "should be implemented in subclass";
+    this.code = 501;
+}
+
+util.inherits(ShouldBeImplementedInSubclass, Error);
 
 /**
  *  This is not implemented and never will be implemented
@@ -154,6 +165,7 @@ exports.Invalid = Invalid;
 exports.MethodNotAllowed = MethodNotAllowed;
 exports.ServiceNotAvailable = ServiceNotAvailable;
 exports.NotImplemented = NotImplemented;
+exports.ShouldBeImplementedInSubclass = ShouldBeImplementedInSubclass;
 exports.NeverImplemented = NeverImplemented;
 exports.SetupRequired = SetupRequired;
 exports.Internal = Internal;
