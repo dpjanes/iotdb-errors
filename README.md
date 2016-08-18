@@ -46,7 +46,7 @@ few helper functions for working with exceptions which may or
 may not be from this module, may not exist at all, etc..
 
     const iotdb = require("iotdb")
-    const _ = require("_")
+    const _ = iotdb._;
 
     _.error.code(error)             // will return code, 500 if no code defined
     _.error.code(error, 404)        // will return code, 404 if no code defined
