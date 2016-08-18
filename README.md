@@ -23,6 +23,7 @@ If you want to use this stand-alone:
 * NotAuthorized (401)
 * NotFound (404)
 * NotImplemented (501)
+* ShouldBeImplementedInSubclass (501)
 * ServiceNotAvailable (503) - e.g. we're connecting to Redis and it doesn't work
 * SetupRequired (500)
 * Timestamp (409) - the timestamp is out of date
