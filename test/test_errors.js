@@ -39,7 +39,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 404);
+            assert.strictEqual(error.statusCode, 404);
         });
 
 
@@ -50,7 +50,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 401);
+            assert.strictEqual(error.statusCode, 401);
         });
 
 
@@ -61,7 +61,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 409);
+            assert.strictEqual(error.statusCode, 409);
         });
 
 
@@ -72,7 +72,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 403);
+            assert.strictEqual(error.statusCode, 403);
         });
 
 
@@ -83,7 +83,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 403);
+            assert.strictEqual(error.statusCode, 403);
         });
 
 
@@ -94,7 +94,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 405);
+            assert.strictEqual(error.statusCode, 405);
         });
 
 
@@ -105,7 +105,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 503);
+            assert.strictEqual(error.statusCode, 503);
         });
 
 
@@ -116,7 +116,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -127,7 +127,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -138,7 +138,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -149,7 +149,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 500);
+            assert.strictEqual(error.statusCode, 500);
         });
 
 
@@ -160,7 +160,7 @@ describe('test_errors', function() {
             assert.strictEqual(error.message, _my_message);
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 500);
+            assert.strictEqual(error.statusCode, 500);
         });
     });
     describe('native message', function() {
@@ -172,7 +172,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 404);
+            assert.strictEqual(error.statusCode, 404);
         });
 
 
@@ -184,7 +184,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 401);
+            assert.strictEqual(error.statusCode, 401);
         });
 
 
@@ -196,7 +196,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 409);
+            assert.strictEqual(error.statusCode, 409);
         });
 
 
@@ -208,7 +208,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 403);
+            assert.strictEqual(error.statusCode, 403);
         });
 
 
@@ -220,7 +220,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 403);
+            assert.strictEqual(error.statusCode, 403);
         });
 
 
@@ -232,7 +232,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 405);
+            assert.strictEqual(error.statusCode, 405);
         });
 
 
@@ -244,7 +244,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 503);
+            assert.strictEqual(error.statusCode, 503);
         });
 
 
@@ -256,7 +256,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -268,7 +268,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -280,7 +280,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 501);
+            assert.strictEqual(error.statusCode, 501);
         });
 
 
@@ -292,7 +292,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 500);
+            assert.strictEqual(error.statusCode, 500);
         });
 
 
@@ -304,7 +304,7 @@ describe('test_errors', function() {
             assert.ok(_.is.String(error.message));
             assert.ok(error instanceof error_class);
             assert.ok(error instanceof Error);
-            assert.strictEqual(error.code, 500);
+            assert.strictEqual(error.statusCode, 500);
         });
     });
 });
