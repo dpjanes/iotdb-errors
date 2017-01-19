@@ -29,7 +29,7 @@ const util = require('util');
 function NotFound(message) {
     Error.call(this);
     this.message = message || "not found";
-    this.code = 404;
+    this.statusCode = 404;
 }
 
 util.inherits(NotFound, Error);
@@ -39,7 +39,7 @@ util.inherits(NotFound, Error);
 function NotAuthorized(message) {
     Error.call(this);
     this.message = message || "not authorized";
-    this.code = 401;
+    this.statusCode = 401;
 }
 
 util.inherits(NotAuthorized, Error);
@@ -50,7 +50,7 @@ util.inherits(NotAuthorized, Error);
 function Timestamp(message) {
     Error.call(this);
     this.message = message || "timestamp out of date";
-    this.code = 409;
+    this.statusCode = 409;
 }
 
 util.inherits(Timestamp, Error);
@@ -61,7 +61,7 @@ util.inherits(Timestamp, Error);
 function NotAppropriate(message) {
     Error.call(this);
     this.message = message || "not appropriate";
-    this.code = 403;
+    this.statusCode = 403;
 }
 
 util.inherits(NotAppropriate, Error);
@@ -72,7 +72,7 @@ util.inherits(NotAppropriate, Error);
 function Invalid(message) {
     Error.call(this);
     this.message = message || "invalid";
-    this.code = 403;
+    this.statusCode = 403;
 }
 
 util.inherits(Invalid, Error);
@@ -83,7 +83,7 @@ util.inherits(Invalid, Error);
 function MethodNotAllowed(message) {
     Error.call(this);
     this.message = message || "method not allowed";
-    this.code = 405;
+    this.statusCode = 405;
 }
 
 util.inherits(MethodNotAllowed, Error);
@@ -94,7 +94,7 @@ util.inherits(MethodNotAllowed, Error);
 function ServiceNotAvailable(message) {
     Error.call(this);
     this.message = message || "underlying service not available";
-    this.code = 503;
+    this.statusCode = 503;
 }
 
 util.inherits(ServiceNotAvailable, Error);
@@ -105,7 +105,7 @@ util.inherits(ServiceNotAvailable, Error);
 function NotImplemented(message) {
     Error.call(this);
     this.message = message || "not implemented";
-    this.code = 501;
+    this.statusCode = 501;
 }
 
 util.inherits(NotImplemented, Error);
@@ -116,7 +116,7 @@ util.inherits(NotImplemented, Error);
 function ShouldBeImplementedInSubclass(message) {
     Error.call(this);
     this.message = message || "should be implemented in subclass";
-    this.code = 501;
+    this.statusCode = 501;
 }
 
 util.inherits(ShouldBeImplementedInSubclass, Error);
@@ -127,7 +127,7 @@ util.inherits(ShouldBeImplementedInSubclass, Error);
 function NeverImplemented(message) {
     Error.call(this);
     this.message = message || "never will be implemented";
-    this.code = 501;
+    this.statusCode = 501;
 }
 
 util.inherits(NeverImplemented, Error);
@@ -138,7 +138,7 @@ util.inherits(NeverImplemented, Error);
 function SetupRequired(message) {
     Error.call(this);
     this.message = message || "setup required";
-    this.code = 500;
+    this.statusCode = 500;
 }
 
 util.inherits(SetupRequired, Error);
@@ -149,7 +149,7 @@ util.inherits(SetupRequired, Error);
 function Internal(message) {
     Error.call(this);
     this.message = message || "internal error";
-    this.code = 500;
+    this.statusCode = 500;
 }
 
 util.inherits(Internal, Error);
