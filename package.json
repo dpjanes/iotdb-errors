@@ -6,16 +6,16 @@
     "description": "IOTDB Module", 
     "devDependencies": {
         "grunt": "~1.0.1", 
-        "grunt-contrib-jshint": "~1.0.0", 
+        "grunt-contrib-jshint": "~1.1.0", 
         "grunt-contrib-nodeunit": "~1.0.0", 
         "grunt-contrib-uglify": "~2.0.0", 
         "grunt-contrib-watch": "~1.0.0", 
         "grunt-jsbeautifier": "~0.2.13", 
         "jshint-stylish": "~2.2.1", 
         "load-grunt-tasks": "~3.5.2", 
-        "request": "~2.74.0"
+        "request": "~2.79.0"
     }, 
-    "homepage": "https://github.com/dpjanes/node-iotdb",
+    "homepage": "https://github.com/dpjanes/node-iotdb", 
     "iotdb": {}, 
     "license": "Apache-2.0", 
     "main": "index.js", 
@@ -29,5 +29,5 @@
         "cover": "istanbul cover _mocha", 
         "test": "grunt"
     }, 
-    "version": "3.0.2"
+    "version": "3.0.3"
 }
