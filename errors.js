@@ -155,6 +155,17 @@ function Internal(message) {
 util.inherits(Internal, Error);
 
 /**
+ *  Can't do this right now
+ */
+function Unavailable(message) {
+    Error.call(this);
+    this.message = message || "temporarily unavailable";
+    this.statusCode = 503;
+}
+
+util.inherits(Unavailable, Error);
+
+/**
  *  API
  */
 exports.NotFound = NotFound;
@@ -169,3 +180,4 @@ exports.ShouldBeImplementedInSubclass = ShouldBeImplementedInSubclass;
 exports.NeverImplemented = NeverImplemented;
 exports.SetupRequired = SetupRequired;
 exports.Internal = Internal;
+exports.Unavailable = Unavailable;
