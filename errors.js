@@ -89,6 +89,17 @@ function MethodNotAllowed(message) {
 util.inherits(MethodNotAllowed, Error);
 
 /**
+ *  waiting for some processing to happen
+ */
+function NotReady(message) {
+    Error.call(this);
+    this.message = message || "resource is not ready yet";
+    this.statusCode = 423;
+}
+
+util.inherits(MethodNotAllowed, Error);
+
+/**
  *  e.g. we're connecting to Redis and it doesn't work
  */
 function ServiceNotAvailable(message) {
@@ -166,6 +177,17 @@ function Unavailable(message) {
 util.inherits(Unavailable, Error);
 
 /**
+ *  Host is not found, e.g. bad address
+ */
+function HostNotFound(message) {
+    Error.call(this);
+    this.message = message || "host not found";
+    this.statusCode = 400;
+}
+
+util.inherits(HostNotFound, Error);
+
+/**
  *  API
  */
 exports.NotFound = NotFound;
@@ -174,6 +196,7 @@ exports.Timestamp = Timestamp;
 exports.NotAppropriate = NotAppropriate;
 exports.Invalid = Invalid;
 exports.MethodNotAllowed = MethodNotAllowed;
+exports.NotReady = NotReady;
 exports.ServiceNotAvailable = ServiceNotAvailable;
 exports.NotImplemented = NotImplemented;
 exports.ShouldBeImplementedInSubclass = ShouldBeImplementedInSubclass;
@@ -181,3 +204,4 @@ exports.NeverImplemented = NeverImplemented;
 exports.SetupRequired = SetupRequired;
 exports.Internal = Internal;
 exports.Unavailable = Unavailable;
+exports.HostNotFound = HostNotFound;
