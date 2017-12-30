@@ -26,10 +26,10 @@ const util = require('util');
 
 /**
  */
-function NotFound(message, error_id) {
+function NotFound(message, code_id) {
     Error.call(this);
     this.message = message || "not found";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 404;
 }
 
@@ -37,10 +37,10 @@ util.inherits(NotFound, Error);
 
 /**
  */
-function NotAuthorized(message, error_id) {
+function NotAuthorized(message, code_id) {
     Error.call(this);
     this.message = message || "not authorized";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 401;
 }
 
@@ -49,10 +49,10 @@ util.inherits(NotAuthorized, Error);
 /**
  *  Timestanp was out of date
  */
-function Timestamp(message, error_id) {
+function Timestamp(message, code_id) {
     Error.call(this);
     this.message = message || "timestamp out of date";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 409;
 }
 
@@ -61,10 +61,10 @@ util.inherits(Timestamp, Error);
 /**
  *  e.g. expecting a thing and got a recipe
  */
-function NotAppropriate(message, error_id) {
+function NotAppropriate(message, code_id) {
     Error.call(this);
     this.message = message || "not appropriate";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 403;
 }
 
@@ -73,10 +73,10 @@ util.inherits(NotAppropriate, Error);
 /**
  *  e.g. something is improperly formatted
  */
-function Invalid(message, error_id) {
+function Invalid(message, code_id) {
     Error.call(this);
     this.message = message || "invalid";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 403;
 }
 
@@ -85,10 +85,10 @@ util.inherits(Invalid, Error);
 /**
  *  e.g. doing a PUT on a model
  */
-function MethodNotAllowed(message, error_id) {
+function MethodNotAllowed(message, code_id) {
     Error.call(this);
     this.message = message || "method not allowed";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 405;
 }
 
@@ -97,10 +97,10 @@ util.inherits(MethodNotAllowed, Error);
 /**
  *  waiting for some processing to happen
  */
-function NotReady(message, error_id) {
+function NotReady(message, code_id) {
     Error.call(this);
     this.message = message || "resource is not ready yet";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 423;
 }
 
@@ -109,10 +109,10 @@ util.inherits(MethodNotAllowed, Error);
 /**
  *  e.g. we're connecting to Redis and it doesn't work
  */
-function ServiceNotAvailable(message, error_id) {
+function ServiceNotAvailable(message, code_id) {
     Error.call(this);
     this.message = message || "underlying service not available";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 503;
 }
 
@@ -121,10 +121,10 @@ util.inherits(ServiceNotAvailable, Error);
 /**
  *  Not implemented
  */
-function NotImplemented(message, error_id) {
+function NotImplemented(message, code_id) {
     Error.call(this);
     this.message = message || "not implemented";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 501;
 }
 
@@ -133,10 +133,10 @@ util.inherits(NotImplemented, Error);
 /**
  *  Not implemented
  */
-function ShouldBeImplementedInSubclass(message, error_id) {
+function ShouldBeImplementedInSubclass(message, code_id) {
     Error.call(this);
     this.message = message || "should be implemented in subclass";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 501;
 }
 
@@ -145,10 +145,10 @@ util.inherits(ShouldBeImplementedInSubclass, Error);
 /**
  *  This is not implemented and never will be implemented
  */
-function NeverImplemented(message, error_id) {
+function NeverImplemented(message, code_id) {
     Error.call(this);
     this.message = message || "never will be implemented";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 501;
 }
 
@@ -157,10 +157,10 @@ util.inherits(NeverImplemented, Error);
 /**
  *  Additional setup is required
  */
-function SetupRequired(message, error_id) {
+function SetupRequired(message, code_id) {
     Error.call(this);
     this.message = message || "setup required";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 500;
 }
 
@@ -169,10 +169,10 @@ util.inherits(SetupRequired, Error);
 /**
  *  Some sort of internal error
  */
-function Internal(message, error_id) {
+function Internal(message, code_id) {
     Error.call(this);
     this.message = message || "internal error";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 500;
 }
 
@@ -181,10 +181,10 @@ util.inherits(Internal, Error);
 /**
  *  Can't do this right now
  */
-function Unavailable(message, error_id) {
+function Unavailable(message, code_id) {
     Error.call(this);
     this.message = message || "temporarily unavailable";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 503;
 }
 
@@ -193,10 +193,10 @@ util.inherits(Unavailable, Error);
 /**
  *  Host is not found, e.g. bad address
  */
-function HostNotFound(message, error_id) {
+function HostNotFound(message, code_id) {
     Error.call(this);
     this.message = message || "host not found";
-    this.error_id = error_id || null;
+    this.code_id = code_id || null;
     this.statusCode = 400;
 }
 
