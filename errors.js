@@ -26,6 +26,16 @@ const util = require('util');
 
 /**
  */
+function Redirect(url) {
+    Error.call(this);
+    this.url = url;
+    this.statusCode = 302;
+}
+
+util.inherits(NotFound, Error);
+
+/**
+ */
 function NotFound(message, code_id) {
     Error.call(this);
     this.message = message || "not found";
@@ -205,6 +215,8 @@ util.inherits(HostNotFound, Error);
 /**
  *  API
  */
+exports.Redirect = Redirect;
+
 exports.NotFound = NotFound;
 exports.NotAuthorized = NotAuthorized;
 exports.Timestamp = Timestamp;
