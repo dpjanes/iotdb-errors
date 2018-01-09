@@ -114,7 +114,7 @@ function NotReady(message, code_id) {
     this.statusCode = 423;
 }
 
-util.inherits(MethodNotAllowed, Error);
+util.inherits(NotReady, Error);
 
 /**
  *  e.g. we're connecting to Redis and it doesn't work
