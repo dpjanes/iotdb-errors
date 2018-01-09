@@ -32,7 +32,7 @@ function Redirect(url) {
     this.statusCode = 302;
 }
 
-util.inherits(NotFound, Error);
+util.inherits(Redirect, Error);
 
 /**
  */
