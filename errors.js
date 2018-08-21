@@ -117,6 +117,18 @@ function NotReady(message, code_id) {
 util.inherits(NotReady, Error);
 
 /**
+ *  Resource is Locked
+ */
+function Locked(message, code_id) {
+    Error.call(this);
+    this.message = message || "resource is locked"
+    this.code_id = code_id || null;
+    this.statusCode = 423;
+}
+
+util.inherits(Locked, Error);
+
+/**
  *  e.g. we're connecting to Redis and it doesn't work
  */
 function ServiceNotAvailable(message, code_id) {
@@ -224,6 +236,7 @@ exports.NotAppropriate = NotAppropriate;
 exports.Invalid = Invalid;
 exports.MethodNotAllowed = MethodNotAllowed;
 exports.NotReady = NotReady;
+exports.Locked = Locked;
 exports.ServiceNotAvailable = ServiceNotAvailable;
 exports.NotImplemented = NotImplemented;
 exports.ShouldBeImplementedInSubclass = ShouldBeImplementedInSubclass;
