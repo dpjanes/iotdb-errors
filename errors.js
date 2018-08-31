@@ -57,6 +57,17 @@ function NotAuthorized(message, code_id) {
 util.inherits(NotAuthorized, Error);
 
 /**
+ */
+function NotModified(message, code_id) {
+    Error.call(this);
+    this.message = message || "not modified";
+    this.code_id = code_id || null;
+    this.statusCode = 304;
+}
+
+util.inherits(NotModified, Error);
+
+/**
  *  Timestanp was out of date
  */
 function Timestamp(message, code_id) {
@@ -231,6 +242,7 @@ exports.Redirect = Redirect;
 
 exports.NotFound = NotFound;
 exports.NotAuthorized = NotAuthorized;
+exports.NotModified = NotModified;
 exports.Timestamp = Timestamp;
 exports.NotAppropriate = NotAppropriate;
 exports.Invalid = Invalid;
